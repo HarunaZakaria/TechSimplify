@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs') %> <%if(locals.randomNameGenerate){%>
+<h1><%=randomNameGenerate%></h1>
+<%} else{%>
+<h1 class="heading">Welcome to TechSimplify 🤟</h1>
+
+<%}%>
+<!-- <form action="/submit" method="POST">
+  <label for="title">Title</label>
+  <input type="text" placeholder="title" name="title" required />
+</form> -->
+<form action="/submit" method="post">
+  <label for="title">Blog Title</label>
+  <input type="text" name="title" placeholder="title" required /> <br />
+  <label for="content">Blog Content</label>
+  <textarea
+    name="content"
+    placeholder="Blog Content"
+    rows="10"
+    cols="50"
+    required
+  ></textarea>
+  <input type="submit" value="post" />
+</form>
+<a href="post.ejs">Post</a>
+
+<!-- Add Footer -->
+<%- include('partials/footer.ejs') %>
