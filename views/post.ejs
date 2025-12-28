@@ -1,5 +1,15 @@
-<h1><%=title %></h1>
-<p><%= content %></p>
-<p>Date: <%= time %></p>
-<button>Delete</button>
-<button>Edit</button>
+<form action="/" method="post">
+  <label for="title">Blog Title</label><br />
+  <input type="text" name="title" placeholder="title" required /> <br />
+  <label for="content">Blog Content</label><br />
+  <textarea
+    name="content"
+    placeholder="Blog Content"
+    rows="10"
+    cols="50"
+    required
+  ></textarea
+  ><br />
+  <input type="submit" value="post" />
+</form>
+<a href="/">home</a>
