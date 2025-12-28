@@ -1,15 +1,6 @@
-<%- include('partials/header.ejs') %> <%if(locals.randomNameGenerate){%>
-<h1><%=randomNameGenerate%></h1>
-<%} else{%>
-<h1 class="heading">Welcome to TechSimplify 🤟</h1>
-
-<%}%>
 <!-- blog post -->
 <h1><%=title %></h1>
 <p><%= content %></p>
 <p>Date: <%= time %></p>
 <button>Delete</button>
 <button>Edit</button>
-
-<!-- Add Footer -->
-<%- include('partials/footer.ejs') %>
