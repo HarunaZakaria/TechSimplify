@@ -10,20 +10,23 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 //submit route
-app.post("/submit", (req, res) => {
+app.post("/", (req, res) => {
   const title = req.body["title"];
   const content = req.body["content"];
-  const date = new Date();
-  res.render("post.ejs", {
+  const date = new Date().toLocaleTimeString();
+  res.render("index.ejs", {
     title: title,
     content: content,
     time: date,
   });
 });
 
-app.get("/submit", (req, res) => {
-  res.render("post.es");
+app.get("/post", (req, res) => {
+  res.render("post.ejs");
 });
+// app.get("/submit", (req, res) => {
+//   res.render("post.es");
+// });
 
 app.listen(port, () => {
   console.log(`Server running at port ${port}`);
